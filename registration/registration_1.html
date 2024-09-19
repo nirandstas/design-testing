@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routee Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="registration-container">
+        <div class="registration-card">
+            <h1>Welcome To <span>Routee</span></h1>
+            <p>Register your account and join us!</p>
+
+            <!-- Tab navigation -->
+            <div class="step-bar">
+                <span class="step active">Company Info</span>
+                <span class="step">Manager Info</span>
+            </div>
+
+            <!-- Company Info Form -->
+            <form id="company-form">
+                <div class="input-group">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" placeholder="Enter company name">
+                </div>
+                <div class="input-group">
+                    <label for="company-type">Company Type</label>
+                    <input type="text" id="company-type" placeholder="Enter company type">
+                </div>
+                <div class="input-group">
+                    <label for="vat-number">VAT Number</label>
+                    <input type="text" id="vat-number" placeholder="Enter VAT number">
+                </div>
+                <div class="input-group">
+                    <label for="insurance">Cargo Insurance</label>
+                    <input type="text" id="insurance" placeholder="Enter insurance details">
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" placeholder="Enter your country">
+                    </div>
+                    <div class="input-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="Enter your city">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" placeholder="Enter phone number">
+                </div>
+            </form>
+
+            <!-- Privacy Policy and Submit Button -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="agree" required>
+                <label class="i-agree" for="agree">I agree with the <a href="#">Policy Privacy</a></label>
+            </div>
+            <button type="submit" class="submit-btn">Get Started</button>
+        </div>
+
+        <div class="image-container">
+            <img src="truck.webp" alt="Truck Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

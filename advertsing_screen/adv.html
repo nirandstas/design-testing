@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routee Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo"><span class="green-title">Green</span> Trux</h1>
+        <nav class="nav-menu">
+            <button class="menu-btn">משלוח חדש</button>
+            <button class="menu-btn">נסיעה חדשה</button>
+            <a href="#">צא'ט</a>
+            <a href="#" class="active">לוח פרסום</a>
+            <a href="#">עמוד הבית</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="filters">
+            <div class="truck">
+                <img src="./icons/truck.svg" width="35" height="35">
+            </div>
+            <div class="need-delivery">
+                <img src="./icons/cargo.svg" width="35" height="35">
+            </div>
+            <div class="date">
+                <input type="datetime-local" id="datetime" name="datetime">
+            </div>
+            <div class="origin">
+                <input placeholder="בחר מוצא" type="text" id="origin" name="city" autocomplete="on">
+            </div>
+            <div class="destination">
+                <input placeholder="בחר יעד" type="text" id="destination" name="city" autocomplete="on">
+            </div>
+        </div>
+        <div class="ride-list">
+            <div class="ride-card">
+                <h3>🚚 נסיעה פנויה</h3>
+                <div class="details-container">
+                    <div class="trip-coordinates-container">
+                        <div class="coordinates-icons">
+                            <div class="origin-point"></div>
+                            <div class="line"></div>
+                            <div class="destination-point"></div>
+                        </div>
+                        <div class="coordinates">
+                            <div class="origin">
+                                <div class="address">חיפה, בת גלים</div>
+                                <div class="date-time">16 אוק, 13:50</div>
+                            </div>
+                            <div class="destination">
+                                <div class="address">תל אביב, מנחם בגין</div>
+                                <div class="date-time">16 אוק, 16:50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="detail-item">
+                            <img src="./icons/building.svg" width="22" height="22">
+                            <p>מובילים ונהנים בע״מ</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/truck.svg" width="22" height="22">
+                            <p>משאית עד 30 טון</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/cargo.svg" width="22" height="22">
+                            <p>העמסת מטען עד 30000 ק״ג</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/lighthouse.svg" width="22" height="22">
+                            <p>אישור כניסה לנמל</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-buttons">
+                    <button class="menu-btn">צא׳ט</button>
+                    <button class="menu-btn">לך לנקודת התתחלה</button>
+                </div>
+            </div>
+            <div class="ride-card">
+                <h3>🚚 נסיעה פנויה</h3>
+                <div class="details-container">
+                    <div class="trip-coordinates-container">
+                        <div class="coordinates-icons">
+                            <div class="origin-point"></div>
+                            <div class="line"></div>
+                            <div class="destination-point"></div>
+                        </div>
+                        <div class="coordinates">
+                            <div class="origin">
+                                <div class="address">חיפה, בת גלים</div>
+                                <div class="date-time">16 אוק, 13:50</div>
+                            </div>
+                            <div class="destination">
+                                <div class="address">תל אביב, מנחם בגין</div>
+                                <div class="date-time">16 אוק, 16:50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="detail-item">
+                            <img src="./icons/building.svg" width="22" height="22">
+                            <p>מובילים ונהנים בע״מ</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/truck.svg" width="22" height="22">
+                            <p>משאית עד 30 טון</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/cargo.svg" width="22" height="22">
+                            <p>העמסת מטען עד 30000 ק״ג</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/lighthouse.svg" width="22" height="22">
+                            <p>אישור כניסה לנמל</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-buttons">
+                    <button class="menu-btn">צא׳ט</button>
+                    <button class="menu-btn">לך לנקודת התתחלה</button>
+                </div>
+            </div>
+            <div class="ride-card">
+                <h3>🚚 נסיעה פנויה</h3>
+                <div class="details-container">
+                    <div class="trip-coordinates-container">
+                        <div class="coordinates-icons">
+                            <div class="origin-point"></div>
+                            <div class="line"></div>
+                            <div class="destination-point"></div>
+                        </div>
+                        <div class="coordinates">
+                            <div class="origin">
+                                <div class="address">חיפה, בת גלים</div>
+                                <div class="date-time">16 אוק, 13:50</div>
+                            </div>
+                            <div class="destination">
+                                <div class="address">תל אביב, מנחם בגין</div>
+                                <div class="date-time">16 אוק, 16:50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="detail-item">
+                            <img src="./icons/building.svg" width="22" height="22">
+                            <p>מובילים ונהנים בע״מ</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/truck.svg" width="22" height="22">
+                            <p>משאית עד 30 טון</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/cargo.svg" width="22" height="22">
+                            <p>העמסת מטען עד 30000 ק״ג</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/lighthouse.svg" width="22" height="22">
+                            <p>אישור כניסה לנמל</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-buttons">
+                    <button class="menu-btn">צא׳ט</button>
+                    <button class="menu-btn">לך לנקודת התתחלה</button>
+                </div>
+            </div>
+            <div class="ride-card">
+                <h3>🚚 נסיעה פנויה</h3>
+                <div class="details-container">
+                    <div class="trip-coordinates-container">
+                        <div class="coordinates-icons">
+                            <div class="origin-point"></div>
+                            <div class="line"></div>
+                            <div class="destination-point"></div>
+                        </div>
+                        <div class="coordinates">
+                            <div class="origin">
+                                <div class="address">חיפה, בת גלים</div>
+                                <div class="date-time">16 אוק, 13:50</div>
+                            </div>
+                            <div class="destination">
+                                <div class="address">תל אביב, מנחם בגין</div>
+                                <div class="date-time">16 אוק, 16:50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="detail-item">
+                            <img src="./icons/building.svg" width="22" height="22">
+                            <p>מובילים ונהנים בע״מ</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/truck.svg" width="22" height="22">
+                            <p>משאית עד 30 טון</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/cargo.svg" width="22" height="22">
+                            <p>העמסת מטען עד 30000 ק״ג</p>
+                        </div>
+                        <div class="detail-item">
+                            <img src="./icons/lighthouse.svg" width="22" height="22">
+                            <p>אישור כניסה לנמל</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-buttons">
+                    <button class="menu-btn">צא׳ט</button>
+                    <button class="menu-btn">לך לנקודת התתחלה</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
