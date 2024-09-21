@@ -4,10 +4,25 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-green: #218838;
+    --secondary-green: #28a745;
+    --light-gray: #f4f4f4;
+    --dark-gray: #333;
+    --background-white: #fff;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    direction: rtl; /* Right-to-left for Hebrew */
+     direction: rtl; /* Right-to-left for Hebrew */
+    line-height: 1.6;
+    font-size: 16px;
+    background-color: var(--light-gray);
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
 .header {
@@ -15,8 +30,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: white;
-    border-bottom: 2px solid #ddd;
+    background-color: var(--background-white);;
+    border-bottom: 2px solid var(--light-gray);
 }
 
 .logo {
@@ -32,7 +47,7 @@ body {
 }
 
 .menu-btn {
-    background-color: #218838;
+    background-color: var(--primary-green);
     color: white;
     font-size: 16px;
     padding: 10px 20px;
@@ -43,7 +58,7 @@ body {
 }
 
 .menu-btn:hover {
-    background-color: #1c7631;
+    background-color: var(--secondary-green);
 }
 
 .nav-menu a {
@@ -71,13 +86,17 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .filters {
+    background-color: var(--background-white);
     display: flex;
     gap: 20px;
     margin-bottom: 24px;
+    border: 1px solid var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .filters input[type="text"], .filters input[type="datetime-local"] {
@@ -112,9 +131,9 @@ body {
 }
 
 .ride-card {
-    background-color: white;
+    background-color: var(--background-white);;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
@@ -130,7 +149,7 @@ body {
 }
 
 .ride-card h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: #218838;
     margin-bottom: 10px;
@@ -174,7 +193,7 @@ body {
 
 .origin-point, .destination-point {
     width: 10px;
-    height: 10px;
+    height: 13px;
     background-color: #218838;
     border-radius: 50%;
 }
@@ -220,6 +239,7 @@ body {
 .address {
     font-weight: bold;
     color: #333;
+    font-size: 14px;
 }
 
 .ride-list {
