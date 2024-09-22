@@ -30,7 +30,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: var(--background-white);;
+    background-color: var(--background-white);
     border-bottom: 2px solid var(--light-gray);
 }
 
@@ -76,6 +76,35 @@ h1, h2, h3 {
 .nav-menu .active {
     font-weight: 600;
     color: #000;
+}
+
+.menu-divider {
+    width: 1px;
+    height: 40px;
+    background-color: #ddd;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style for the user icon */
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+/* Style for the dropdown icon */
+.dropdown-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .container {

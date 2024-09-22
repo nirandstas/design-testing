@@ -4,20 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Routee Menu</title>
+    <title>GreenTrux Menu</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header class="header">
-        <h1 class="logo"><span class="green-title">Green</span> Trux</h1>
+        <div class="logo-container">
+            <h1 class="logo"><span class="green-title">Green</span> Trux</h1>
+        </div>
         <nav class="nav-menu">
             <button class="menu-btn">משלוח חדש</button>
             <button class="menu-btn">נסיעה חדשה</button>
             <a href="#">צא'ט</a>
             <a href="#" class="active">לוח פרסום</a>
             <a href="#">עמוד הבית</a>
+            
+            <div class="menu-divider"></div> <!-- This is the thin line between icons and menu -->
+    
+            <div class="user-section">
+                <!-- <img src="user-icon.png" alt="User Icon" class="user-icon"> Replace with actual user icon -->
+                <div  class="user-icon"></div> <!-- Replace with actual user icon -->
+                <img src="./icons/dropdown-icon.png"  alt="Dropdown Icon" class="dropdown-icon"> <!-- Replace with actual dropdown icon -->
+            </div>
         </nav>
     </header>
     <div class="container">

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTrux Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo"><span class="green-title">Green</span> Trux</h1>
+        </div>
+        <nav class="nav-menu">
+            <button class="menu-btn">משלוח חדש</button>
+            <button class="menu-btn">נסיעה חדשה</button>
+            <a href="#">צא'ט</a>
+            <a href="#" class="active">לוח פרסום</a>
+            <a href="#">עמוד הבית</a>
+            
+            <div class="menu-divider"></div> <!-- This is the thin line between icons and menu -->
+    
+            <div class="user-section">
+                <!-- <img src="user-icon.png" alt="User Icon" class="user-icon"> Replace with actual user icon -->
+                <div  class="user-icon"></div> <!-- Replace with actual user icon -->
+                <img src="./icons/dropdown-icon.png"  alt="Dropdown Icon" class="dropdown-icon"> <!-- Replace with actual dropdown icon -->
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="main-title">
+            <h2>הצעת הובלה</h2>
+        </div>
+        <form>
+            <div class="location-time">
+                <div class="location">
+                    <div class="origin">
+                        <label for="origin">מוצא</label>
+                        <input type="text" id="origin" name="origin" placeholder="בחר מוצא">
+                    </div>
+                    <div class=""destination>
+                        <label for="destination">יעד</label>
+                        <input type="text" id="destination" name="destination" placeholder="בחר יעד">
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="origin-time">
+                        <label for="datetime">תאריך ושעה</label>
+                        <input type="datetime-local" id="datetime" name="datetime">
+                    </div>
+                    <div class="destination-time">
+                        <label for="datetime">תאריך ושעה</label>
+                        <input type="datetime-local" id="datetime" name="datetime">
+                    </div>
+                </div>
+            </div>
+            <div class="truck-cargo">
+                <div class="truck-type">
+                    <label for="truckType">סוג משאית</label>
+                    <input type="text" id="truckType" name="truckType" placeholder="בחר סוג משאית">
+                </div>
+                <div class="calculated-cargo-weight">
+                    <p>משקל מירבי: 30,000 ק״ג</p>
+                </div>
+                <div class="additional-info">
+                    <input type="checkbox" id="belt" name="belt" value="belt">
+                    <label for="belt">חגורת קשירה</label><br>
+                    <input type="checkbox" id="chains" name="chains" value="chains">
+                    <label for="chains">שרשראות</label><br>
+                    <input type="checkbox" id="terminal" name="terminal" value="terminal">
+                    <label for="terminal">כניסה לנמל</label><br>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Green Trux logo" width="150"> <!-- Replace with your actual logo file -->
+                <p>&copy; 2024 Green Trux. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer-contact">
+                <p>Email: support@greentrux.com</p>
+                <p>Phone: +972 3-123-4567</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
