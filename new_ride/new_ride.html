@@ -20,62 +20,85 @@
             <a href="#">צא'ט</a>
             <a href="#" class="active">לוח פרסום</a>
             <a href="#">עמוד הבית</a>
-            
-            <div class="menu-divider"></div> <!-- This is the thin line between icons and menu -->
-    
+
+            <div class="menu-divider"></div>
+
             <div class="user-section">
-                <!-- <img src="user-icon.png" alt="User Icon" class="user-icon"> Replace with actual user icon -->
-                <div  class="user-icon"></div> <!-- Replace with actual user icon -->
-                <img src="./icons/dropdown-icon.png"  alt="Dropdown Icon" class="dropdown-icon"> <!-- Replace with actual dropdown icon -->
+                <div class="user-icon"></div>
+                <img src="./icons/dropdown-icon.png" alt="Dropdown Icon" class="dropdown-icon">
             </div>
         </nav>
     </header>
-    <div class="container">
+    <main class="container">
         <div class="main-title">
             <h2>הצעת הובלה</h2>
         </div>
         <form>
-            <div class="location-time">
-                <div class="location">
-                    <div class="origin">
+            <div class="form-section">
+                <h3 class="section-title">מסלול וזמנים</h3>
+                <div class="location-time">
+                    <div class="form-group">
                         <label for="origin">מוצא</label>
                         <input type="text" id="origin" name="origin" placeholder="בחר מוצא">
                     </div>
-                    <div class=""destination>
+                    <div class="form-group">
                         <label for="destination">יעד</label>
                         <input type="text" id="destination" name="destination" placeholder="בחר יעד">
                     </div>
                 </div>
-                <div class="time">
-                    <div class="origin-time">
-                        <label for="datetime">תאריך ושעה</label>
-                        <input type="datetime-local" id="datetime" name="datetime">
+                <div class="time-date">
+                    <div class="form-group">
+                        <label for="departure-datetime">תאריך ושעת יציאה</label>
+                        <input type="datetime-local" id="departure-datetime" name="departure-datetime">
                     </div>
-                    <div class="destination-time">
-                        <label for="datetime">תאריך ושעה</label>
-                        <input type="datetime-local" id="datetime" name="datetime">
+                    <div class="form-group">
+                        <label for="arrival-datetime">תאריך ושעת הגעה</label>
+                        <input type="datetime-local" id="arrival-datetime" name="arrival-datetime">
+                    </div>
+                </div>
+                <button class="submit-btn add-time-date-btn">הוסף זמן גמיש</button>
+            </div>
+            <div class="form-section">
+                <h3 class="section-title">משאיות ומטענים</h3>
+                <div class="truck-type-more-info">
+                    <div class="form-group">
+                        <label for="truckType">סוג משאית</label>
+                        <select id="truckType" name="truckType">
+                            <option value="">בחר סוג משאית</option>
+                            <option value="light">משאית קלה</option>
+                            <option value="medium">משאית בינונית</option>
+                            <option value="heavy">משאית כבדה</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="maxWeight">משקל מירבי מחושב</label>
+                        <div class="input-with-unit">
+                            <p>30,000 ק״ג</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>מידע נוסף</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="belt" name="additionalInfo" value="belt">
+                        <label for="belt">חגורת קשירה</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="chains" name="additionalInfo" value="chains">
+                        <label for="chains">שרשראות</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terminal" name="additionalInfo" value="terminal">
+                        <label for="terminal">כניסה לנמל</label>
                     </div>
                 </div>
             </div>
-            <div class="truck-cargo">
-                <div class="truck-type">
-                    <label for="truckType">סוג משאית</label>
-                    <input type="text" id="truckType" name="truckType" placeholder="בחר סוג משאית">
-                </div>
-                <div class="calculated-cargo-weight">
-                    <p>משקל מירבי: 30,000 ק״ג</p>
-                </div>
-                <div class="additional-info">
-                    <input type="checkbox" id="belt" name="belt" value="belt">
-                    <label for="belt">חגורת קשירה</label><br>
-                    <input type="checkbox" id="chains" name="chains" value="chains">
-                    <label for="chains">שרשראות</label><br>
-                    <input type="checkbox" id="terminal" name="terminal" value="terminal">
-                    <label for="terminal">כניסה לנמל</label><br>
-                </div>
+            <div class="form-buttons">
+                <button type="reset" class="reset-btn">נקה</button>
+                <button type="submit" class="submit-btn">שלח</button>
             </div>
         </form>
-    </div>
+    </main>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
@@ -93,7 +116,6 @@
             </div>
         </div>
     </footer>
-    
 </body>
 
 </html>
