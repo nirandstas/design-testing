@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenTrux Menu</title>
+    <title>GreenTrux Chat Layout</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -29,171 +28,37 @@
             </div>
         </nav>
     </header>
+
     <main class="container">
-        <!-- <div class="main-title">
-            <h2>בקשות הובלה</h2>
+        <!-- Main chat layout inside the container -->
+        <div class="chat-layout">
+            <!-- Left section: List of users with icons -->
+            <aside class="user-list">
+                <div class="user-item">
+                    <img src="./user.png" alt="User Icon" class="user-avatar">
+                    <span>יוסי כהן</span>
+                </div>
+                <div class="user-item">
+                    <img src="./user.png" alt="User Icon" class="user-avatar">
+                    <span>אבי לוי</span>
+                </div>
+                <div class="user-item">
+                    <img src="./user.png" alt="User Icon" class="user-avatar">
+                    <span>דוד רינגבלום</span>
+                </div>
+            </aside>
+
+            <!-- Right section: Chat window -->
+            <section class="chat-window">
+                <p>התחלת שיחה עם יוסי כהן</p>
+            </section>
         </div>
-        <form>
-            <!-- Source Details Section -->
-            <div class="form-section">
-                <h3 class="section-title">פרטי מוצא</h3>
-                <div class="location-time">
-                    <div class="form-group">
-                        <label for="origin">מוצא</label>
-                        <input type="text" id="origin" name="origin" placeholder="נקודת איסוף">
-                    </div>
-                    <div class="form-group">
-                        <label for="company">שם החברה השולחת</label>
-                        <input type="text" id="company" name="company" placeholder="בחר חברה">
-                    </div>
-                </div>
-                <div class="time-date">
-                    <div class="form-group">
-                        <label for="departure-datetime">תאריך ושעת יציאה</label>
-                        <input type="datetime-local" id="departure-datetime" name="departure-datetime">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">מספר טלפון</label>
-                        <input type="text" id="phone" name="phone" placeholder="מספר טלפון">
-                    </div>
-                </div>
-                <button class="add-time-date-btn">הוסף זמן מוצא גמיש</button>
-            </div>
-
-            <!-- Destination Details Section -->
-            <div class="form-section">
-                <h3 class="section-title">פרטי יעד</h3>
-                <div class="location-time">
-                    <div class="form-group">
-                        <label for="destination">יעד</label>
-                        <input type="text" id="destination" name="destination" placeholder="נקודת יעד">
-                    </div>
-                    <div class="form-group">
-                        <label for="company-recipient">שם החברה מקבלת</label>
-                        <input type="text" id="company-recipient" name="company-recipient" placeholder="בחר חברה">
-                    </div>
-                </div>
-                <div class="time-date">
-                    <div class="form-group">
-                        <label for="arrival-datetime">תאריך ושעת אספקה</label>
-                        <input type="datetime-local" id="arrival-datetime" name="arrival-datetime">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone-recipient">מספר טלפון</label>
-                        <input type="text" id="phone-recipient" name="phone-recipient" placeholder="מספר טלפון">
-                    </div>
-                </div>
-                <div class="flex-buttons">
-                    <button class="add-time-date-btn">הוסף זמן אספקה גמיש</button>
-                    <button class="add-stop-btn">הוסף עצירה</button>
-                </div>
-            </div>
-
-            <!-- Transport Details Section -->
-            <div class="form-section">
-                <h3 class="section-title">פרטי הובלה</h3>
-                <div class="truck-type-more-info">
-                    <div class="form-group">
-                        <label for="truckType">סוג משאית</label>
-                        <select id="truckType" name="truckType">
-                            <option value="">בחר סוג משאית</option>
-                            <option value="light">משאית קלה</option>
-                            <option value="medium">משאית בינונית</option>
-                            <option value="heavy">משאית כבדה</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="maxWeight">משקל מירבי מחושב</label>
-                        <div class="input-with-unit">
-                            <p>30,000 ק״ג</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cargo-type">
-                    <div class="form-group">
-                        <label for="cargoType">סוג המטען</label>
-                        <select id="cargoType" name="cargoType">
-                            <option value="">בחר סוג מטען</option>
-                            <option value="cargoA">מטען א</option>
-                            <option value="cargoB">מטען ב</option>
-                            <option value="cargoC">מטען ג</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="cargoVolume">נפח מטען</label>
-                        <select id="cargoVolume" name="cargoVolume">
-                            <option value="">בחר נפח מטען</option>
-                            <option value="volumeA">נפח א</option>
-                            <option value="volumeB">נפח ב</option>
-                            <option value="volumeC">נפח ג</option>
-                        </select>
-                    </div>
-
-                    <!-- Radio Buttons Styled -->
-                    <div class="form-group">
-                        <label for="transportType">סוג הובלה</label>
-                        <div class="radio-group">
-                            <label>
-                                <input type="radio" id="truck" name="transportType" value="truck"> משאית
-                            </label>
-                            <label>
-                                <input type="radio" id="container" name="transportType" value="container"> מכולה
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional Info -->
-                <div class="form-group checkbox-group">
-                    <label>מידע נוסף</label>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="belt" name="additionalInfo" value="belt">
-                        <label for="belt">חגורת קשירה</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="chains" name="additionalInfo" value="chains">
-                        <label for="chains">שרשראות</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="terminal" name="additionalInfo" value="terminal">
-                        <label for="terminal">כניסה לנמל</label>
-                    </div>
-                </div>
-
-                <!-- Price Info -->
-                <div class="price">
-                    <div class="form-group">
-                        <label for="price">מחיר</label>
-                        <input type="text" id="price" name="price">
-                    </div>
-                    <div class="form-group">
-                        <label for="currency-type">סוג מטבע</label>
-                        <input type="text" id="currency-type" name="currency-type">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Comments Section -->
-            <div class="form-section">
-                <h3 class="section-title">הערות</h3>
-                <div class="form-group">
-                    <label for="comments">הערות נוספות</label>
-                    <textarea id="comments" name="comments" placeholder="הזן הערות נוספות כאן" rows="5"></textarea>
-                </div>
-            </div>
-
-            <!-- Form Buttons -->
-            <div class="form-buttons">
-                <button type="reset" class="reset-btn">נקה</button>
-                <button type="submit" class="submit-btn">שלח</button>
-            </div>
-        </form> -->
     </main>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="logo.png" alt="Green Trux logo" width="150">
+                <img src="logo.png" alt="Green Trux logo" width="150"> <!-- Replace with your actual logo file -->
                 <p>&copy; 2024 Green Trux. All rights reserved.</p>
             </div>
             <div class="footer-links">
@@ -207,6 +72,227 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --primary-green: #218838;
+        --secondary-green: #28a745;
+        --light-gray: #f4f4f4;
+        --dark-gray: #333;
+        --background-white: #fff;
+        --inner-box-bg: #f0f0f0;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        direction: rtl; /* Right-to-left for Hebrew */
+        line-height: 1.6;
+        font-size: 16px;
+        background-color: var(--light-gray);
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex-grow: 1; /* Ensures that main grows and pushes footer down */
+    }
+
+    h1, h2, h3 {
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: var(--background-white);
+        border-bottom: 2px solid var(--light-gray);
+    }
+
+    .logo {
+        font-size: 34px;
+        font-weight: 600;
+        color: #0056b3;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-btn {
+        background-color: var(--primary-green);
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .menu-btn:hover {
+        background-color: var(--secondary-green);
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+        color: #333;
+        text-decoration: none;
+        padding: 10px;
+        transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+        color: #007bff;
+    }
+
+    .nav-menu .active {
+        font-weight: 600;
+        color: #000;
+    }
+
+    .menu-divider {
+        width: 1px;
+        height: 40px;
+        background-color: #ddd;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .user-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .user-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+
+    .dropdown-icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .container {
+        width: 1368px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .chat-layout {
+        display: flex;
+        height: calc(100vh - 200px); /* Adjust height considering header and footer */
+    }
+
+    .user-list {
+        width: 25%;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-right: 1px solid var(--light-gray);
+    }
+
+    .user-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .user-item:hover {
+        background-color: var(--primary-green);
+        color: white;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .chat-window {
+        width: 75%;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    .footer {
+        background-color: var(--background-white);
+        padding: 20px 0;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+        border-top: 1px solid var(--light-gray);
+        font-size: 14px;
+        color: var(--dark-gray);
+    }
+
+    .footer-container {
+        max-width: 1368px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-logo img {
+        margin-bottom: 5px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-links a {
+        color: var(--dark-gray);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: var(--primary-green);
+    }
+
+    .footer-contact {
+        font-size: 14px;
+        text-align: right;
+    }
+</style>
+
