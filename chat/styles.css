@@ -315,11 +315,57 @@ form {
     text-align: right;
 }
 
-.location-time, .time-date, .truck-type-more-info {
+.location-time, .time-date, .truck-type-more-info, .cargo-type, .truck-or-container, .price {
     display: flex;
     gap: 30px;
 }
 
 .add-time-date-btn {
     align-self: start;
+}
+
+.add-stop-btn {
+    background-color: #0056b3;
+}
+
+.need-delivery {
+    height: 45px;
+    border-radius: 10px;
+    border: #ddd solid 1px;
+    background-color: #ffffff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.truck:hover, .need-delivery:hover {
+    background-color: #f9f9f9;
+}
+.add-time-date-btn,
+.add-stop-btn {
+    background-color: var(--primary-green);
+    color: white;
+    font-size: 16px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.add-time-date-btn:hover,
+.add-stop-btn:hover {
+    background-color: var(--secondary-green);
+}
+
+.flex-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: start;
 }

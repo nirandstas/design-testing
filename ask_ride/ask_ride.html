@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTrux Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo"><span class="green-title">Green</span> Trux</h1>
+        </div>
+        <nav class="nav-menu">
+            <button class="menu-btn">משלוח חדש</button>
+            <button class="menu-btn">נסיעה חדשה</button>
+            <a href="#">צא'ט</a>
+            <a href="#" class="active">לוח פרסום</a>
+            <a href="#">עמוד הבית</a>
+
+            <div class="menu-divider"></div>
+
+            <div class="user-section">
+                <div class="user-icon"></div>
+                <img src="./icons/dropdown-icon.png" alt="Dropdown Icon" class="dropdown-icon">
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="main-title">
+            <h2>בקשות הובלה</h2>
+        </div>
+        <form>
+            <!-- Source Details Section -->
+            <div class="form-section">
+                <h3 class="section-title">פרטי מוצא</h3>
+                <div class="location-time">
+                    <div class="form-group">
+                        <label for="origin">מוצא</label>
+                        <input type="text" id="origin" name="origin" placeholder="נקודת איסוף">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">שם החברה השולחת</label>
+                        <input type="text" id="company" name="company" placeholder="בחר חברה">
+                    </div>
+                </div>
+                <div class="time-date">
+                    <div class="form-group">
+                        <label for="departure-datetime">תאריך ושעת יציאה</label>
+                        <input type="datetime-local" id="departure-datetime" name="departure-datetime">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">מספר טלפון</label>
+                        <input type="text" id="phone" name="phone" placeholder="מספר טלפון">
+                    </div>
+                </div>
+                <button class="add-time-date-btn">הוסף זמן מוצא גמיש</button>
+            </div>
+
+            <!-- Destination Details Section -->
+            <div class="form-section">
+                <h3 class="section-title">פרטי יעד</h3>
+                <div class="location-time">
+                    <div class="form-group">
+                        <label for="destination">יעד</label>
+                        <input type="text" id="destination" name="destination" placeholder="נקודת יעד">
+                    </div>
+                    <div class="form-group">
+                        <label for="company-recipient">שם החברה מקבלת</label>
+                        <input type="text" id="company-recipient" name="company-recipient" placeholder="בחר חברה">
+                    </div>
+                </div>
+                <div class="time-date">
+                    <div class="form-group">
+                        <label for="arrival-datetime">תאריך ושעת אספקה</label>
+                        <input type="datetime-local" id="arrival-datetime" name="arrival-datetime">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-recipient">מספר טלפון</label>
+                        <input type="text" id="phone-recipient" name="phone-recipient" placeholder="מספר טלפון">
+                    </div>
+                </div>
+                <div class="flex-buttons">
+                    <button class="add-time-date-btn">הוסף זמן אספקה גמיש</button>
+                    <button class="add-stop-btn">הוסף עצירה</button>
+                </div>
+            </div>
+
+            <!-- Transport Details Section -->
+            <div class="form-section">
+                <h3 class="section-title">פרטי הובלה</h3>
+                <div class="truck-type-more-info">
+                    <div class="form-group">
+                        <label for="truckType">סוג משאית</label>
+                        <select id="truckType" name="truckType">
+                            <option value="">בחר סוג משאית</option>
+                            <option value="light">משאית קלה</option>
+                            <option value="medium">משאית בינונית</option>
+                            <option value="heavy">משאית כבדה</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="maxWeight">משקל מירבי מחושב</label>
+                        <div class="input-with-unit">
+                            <p>30,000 ק״ג</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cargo-type">
+                    <div class="form-group">
+                        <label for="cargoType">סוג המטען</label>
+                        <select id="cargoType" name="cargoType">
+                            <option value="">בחר סוג מטען</option>
+                            <option value="cargoA">מטען א</option>
+                            <option value="cargoB">מטען ב</option>
+                            <option value="cargoC">מטען ג</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cargoVolume">נפח מטען</label>
+                        <select id="cargoVolume" name="cargoVolume">
+                            <option value="">בחר נפח מטען</option>
+                            <option value="volumeA">נפח א</option>
+                            <option value="volumeB">נפח ב</option>
+                            <option value="volumeC">נפח ג</option>
+                        </select>
+                    </div>
+
+                    <!-- Radio Buttons Styled -->
+                    <div class="form-group">
+                        <label for="transportType">סוג הובלה</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" id="truck" name="transportType" value="truck"> משאית
+                            </label>
+                            <label>
+                                <input type="radio" id="container" name="transportType" value="container"> מכולה
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="form-group checkbox-group">
+                    <label>מידע נוסף</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="belt" name="additionalInfo" value="belt">
+                        <label for="belt">חגורת קשירה</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="chains" name="additionalInfo" value="chains">
+                        <label for="chains">שרשראות</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terminal" name="additionalInfo" value="terminal">
+                        <label for="terminal">כניסה לנמל</label>
+                    </div>
+                </div>
+
+                <!-- Price Info -->
+                <div class="price">
+                    <div class="form-group">
+                        <label for="price">מחיר</label>
+                        <input type="text" id="price" name="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="currency-type">סוג מטבע</label>
+                        <input type="text" id="currency-type" name="currency-type">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="form-section">
+                <h3 class="section-title">הערות</h3>
+                <div class="form-group">
+                    <label for="comments">הערות נוספות</label>
+                    <textarea id="comments" name="comments" placeholder="הזן הערות נוספות כאן" rows="5"></textarea>
+                </div>
+            </div>
+
+            <!-- Form Buttons -->
+            <div class="form-buttons">
+                <button type="reset" class="reset-btn">נקה</button>
+                <button type="submit" class="submit-btn">שלח</button>
+            </div>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Green Trux logo" width="150">
+                <p>&copy; 2024 Green Trux. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer-contact">
+                <p>Email: support@greentrux.com</p>
+                <p>Phone: +972 3-123-4567</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
