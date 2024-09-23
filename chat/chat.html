@@ -56,8 +56,31 @@
                 </div>
                 <div class="chat-body">
                     <div class="chat-messages">
-                        <!-- Chat messages go here -->
+                        <div class="message other">
+                            <div class="message-content">
+                                <span class="message-user">Yossi Cohen</span>
+                                <p>Hi, I need help with the delivery process.</p>
+                                <span class="message-time">16:45</span>
+                            </div>
+                        </div>
+
+                        <div class="message user">
+                            <div class="message-content">
+                                <span class="message-user">You</span>
+                                <p>Sure, what seems to be the issue?</p>
+                                <span class="message-time">16:47</span>
+                            </div>
+                        </div>
+
+                        <div class="message other">
+                            <div class="message-content">
+                                <span class="message-user">Yossi Cohen</span>
+                                <p>I'm unsure how to track the delivery status.</p>
+                                <span class="message-time">16:48</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="chat-input-wrapper">
                         <input type="text" class="chat-input" placeholder="Type a message...">
                         <button class="chat-submit-btn">Send</button>
@@ -345,49 +368,111 @@
     }
 
     .chat-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 20px;
-    background-color: #e9ecef;
-}
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        background-color: #e9ecef;
+    }
 
-.chat-messages {
-    flex-grow: 1;
-    overflow-y: auto;
-    margin-bottom: 20px; /* Adds space above the input field */
-}
+    .chat-messages {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-bottom: 20px;
+        /* Adds space above the input field */
+    }
 
-.chat-input-wrapper {
-    display: flex;
-    background-color: white;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    gap: 10px;
-}
+    .chat-input-wrapper {
+        display: flex;
+        background-color: white;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        gap: 10px;
+    }
 
-.chat-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-    font-size: 16px;
-}
+    .chat-input {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+    }
 
-.chat-submit-btn {
-    background-color: var(--primary-green);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-left: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+    .chat-submit-btn {
+        background-color: var(--primary-green);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-left: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
-.chat-submit-btn:hover {
-    background-color: var(--secondary-green);
-}
+    .chat-submit-btn:hover {
+        background-color: var(--secondary-green);
+    }
+
+    /* Chat messages container */
+    .chat-messages {
+        flex-grow: 1;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Message styling */
+    .message {
+        max-width: 70%;
+        padding: 10px 15px;
+        border-radius: 10px;
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Sent by the user */
+    .message.user {
+        background-color: var(--primary-green);
+        color: white;
+        align-self: flex-end;
+    }
+
+    /* Sent by others */
+    .message.other {
+        background-color: #f0f0f0;
+        color: #333;
+        align-self: flex-start;
+    }
+
+    /* Message content */
+    .message-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .message-user {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .message-time {
+        font-size: 12px;
+        color: #888;
+        margin-top: 5px;
+        align-self: flex-end;
+    }
+
+    /* Add spacing for chat bubbles */
+    .message.user {
+        border-bottom-right-radius: 0;
+    }
+
+    .message.other {
+        border-bottom-left-radius: 0;
+    }
 </style>
