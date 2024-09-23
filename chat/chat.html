@@ -49,9 +49,22 @@
             </aside>
 
             <!-- Right section: Chat window -->
-            <section class="chat-window">
-                <p>התחלת שיחה עם יוסי כהן</p>
-            </section>
+            <div class="chat-window">
+                <div class="chat-header">
+                    <img src="./user.png" alt="User Icon" class="chat-user-icon">
+                    <span class="chat-user-name">יוסי כהן</span>
+                </div>
+                <div class="chat-body">
+                    <div class="chat-messages">
+                        <!-- Chat messages go here -->
+                    </div>
+                    <div class="chat-input-wrapper">
+                        <input type="text" class="chat-input" placeholder="Type a message...">
+                        <button class="chat-submit-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -93,13 +106,15 @@
         --inner-box-bg: #f0f0f0;
     }
 
-    html, body {
+    html,
+    body {
         height: 100%;
     }
 
     body {
         font-family: 'Poppins', sans-serif;
-        direction: rtl; /* Right-to-left for Hebrew */
+        direction: rtl;
+        /* Right-to-left for Hebrew */
         line-height: 1.6;
         font-size: 16px;
         background-color: var(--light-gray);
@@ -108,10 +123,13 @@
     }
 
     main {
-        flex-grow: 1; /* Ensures that main grows and pushes footer down */
+        flex-grow: 1;
+        /* Ensures that main grows and pushes footer down */
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
         font-weight: 600;
         letter-spacing: 0.05em;
     }
@@ -208,7 +226,8 @@
 
     .chat-layout {
         display: flex;
-        height: calc(100vh - 200px); /* Adjust height considering header and footer */
+        height: calc(100vh - 200px);
+        /* Adjust height considering header and footer */
     }
 
     .user-list {
@@ -294,5 +313,81 @@
         font-size: 14px;
         text-align: right;
     }
-</style>
 
+    .chat-window {
+        flex-grow: 1;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid #ddd;
+    }
+
+    .chat-header {
+        background-color: white;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        gap: 10px;
+    }
+
+    .chat-user-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .chat-user-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .chat-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px; /* Adds space above the input field */
+}
+
+.chat-input-wrapper {
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    gap: 10px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.chat-submit-btn {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-submit-btn:hover {
+    background-color: var(--secondary-green);
+}
+</style>
