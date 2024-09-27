@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTrux Add User</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo"><span class="green-title">Green</span> Trux</h1>
+        </div>
+        <nav class="nav-menu">
+            <button class="menu-btn">משלוח חדש</button>
+            <button class="menu-btn">נסיעה חדשה</button>
+            <a href="#">צא'ט</a>
+            <a href="#" class="active">לוח פרסום</a>
+            <a href="#">עמוד הבית</a>
+
+            <div class="menu-divider"></div> <!-- Divider between icons and menu -->
+
+            <div class="user-section">
+                <div class="user-icon"></div> <!-- Replace with actual user icon -->
+                <img src="./icons/dropdown-icon.png" alt="Dropdown Icon" class="dropdown-icon">
+                <!-- Replace with actual dropdown icon -->
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="settings-layout">
+            <!-- Left menu for settings -->
+            <div class="settings-menu">
+                <ul>
+                    <li><a href="#">משתמשים</a></li>
+                    <li><a href="#">ציי רכבים</a></li>
+                    <li><a href="#">פרטי התקשרות</a></li>
+                    <li><a href="#">פרטי החברה</a></li>
+                </ul>
+            </div>
+
+            <!-- Right content area with the form -->
+            <div class="settings-content">
+                <h2>הוסף משתמש חדש</h2>
+                <form class="user-form">
+                    <div class="form-section">
+                        <div class="names">
+                            <div class="form-group">
+                                <label for="first-name">שם פרטי</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="שם פרטי">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">שם משפחה</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="שם משפחה">
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="contact-details">
+                            <div class="form-group">
+                                <label for="email">אימייל</label>
+                                <input type="email" id="email" name="email" placeholder="אימייל">
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="phone">מספר טלפון</label>
+                                <input type="tel" id="phone" name="phone" placeholder="מספר טלפון">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>תפקיד</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="manager" name="role" value="manager">
+                                    <label for="manager">מנהל</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="driver" name="role" value="driver">
+                                    <label for="driver">נהג</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="address">כתובת</label>
+                            <input type="text" id="address" name="address" placeholder="כתובת">
+                        </div>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="reset" class="reset-btn">נקה</button>
+                        <button type="submit" class="submit-btn">הוסף משתמש</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Green Trux logo" width="150"> <!-- Replace with your actual logo file -->
+                <p>&copy; 2024 Green Trux. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer-contact">
+                <p>Email: support@greentrux.com</p>
+                <p>Phone: +972 3-123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --primary-green: #218838;
+        --secondary-green: #28a745;
+        --light-gray: #f4f4f4;
+        --dark-gray: #333;
+        --background-white: #fff;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        direction: rtl;
+        /* Right-to-left for Hebrew */
+        line-height: 1.6;
+        font-size: 16px;
+        background-color: var(--light-gray);
+    }
+
+    h1,
+    h2 {
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: var(--background-white);
+        border-bottom: 2px solid var(--light-gray);
+    }
+
+    .logo {
+        font-size: 34px;
+        font-weight: 600;
+        color: #0056b3;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-btn {
+        background-color: var(--primary-green);
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .menu-btn:hover {
+        background-color: var(--secondary-green);
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+        color: #333;
+        text-decoration: none;
+        padding: 10px;
+        transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+        color: #007bff;
+    }
+
+    .nav-menu .active {
+        font-weight: 600;
+        color: #000;
+    }
+
+    .menu-divider {
+        width: 1px;
+        height: 40px;
+        background-color: #ddd;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .user-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .user-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+
+    .dropdown-icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .container {
+        max-width: 1368px;
+        margin: 0 auto;
+        padding: 20px;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .settings-layout {
+        display: flex;
+        gap: 20px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .settings-menu {
+        width: 25%;
+        background-color: var(--light-gray);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .settings-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .settings-menu ul li {
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--dark-gray);
+        padding-bottom: 10px;
+    }
+
+    .settings-menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    .settings-menu ul li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: var(--dark-gray);
+        transition: color 0.3s ease;
+    }
+
+    .settings-menu ul li a:hover {
+        color: var(--primary-green);
+    }
+
+    .settings-content {
+        width: 75%;
+        padding: 20px;
+        background-color: var(--background-white);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .user-form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: var(--background-white);
+        padding: 30px;
+        border: 1px solid var(--light-gray);
+        border-radius: 8px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        color: var(--dark-gray);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"] {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus {
+        border-color: var(--primary-green);
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .form-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .submit-btn,
+    .reset-btn {
+        background-color: var(--primary-green);
+        color: white;
+        font-size: 18px;
+        padding: 12px 40px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover,
+    .reset-btn:hover {
+        background-color: var(--secondary-green);
+    }
+
+    .reset-btn {
+        background-color: #6c757d;
+    }
+
+    .reset-btn:hover {
+        background-color: #5a6268;
+    }
+
+    .footer {
+        background-color: var(--background-white);
+        padding: 20px 0;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+        border-top: 1px solid var(--light-gray);
+        font-size: 14px;
+        color: var(--dark-gray);
+    }
+
+    .footer-container {
+        max-width: 1368px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-logo img {
+        margin-bottom: 5px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-links a {
+        color: var(--dark-gray);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: var(--primary-green);
+    }
+
+    .footer-contact {
+        font-size: 14px;
+        text-align: right;
+    }
+
+    .names, .contact-details {
+        display: flex;
+        gap: 30px;
+    }
+</style>
